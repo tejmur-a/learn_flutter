@@ -7,8 +7,9 @@ class User {
   final String id;
   final String name;
 
-  User({
-    required this.id,
-    required this.name
-  });
-} 
+  User({required this.id, required this.name});
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserToJson(this);
+}
